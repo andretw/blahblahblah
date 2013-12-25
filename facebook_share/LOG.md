@@ -1,5 +1,9 @@
-Ref: http://stackoverflow.com/questions/1138460/how-does-facebook-sharer-select-images
+Facebook Sharer
+- Public server and domain. (Facebook will fetch your page first.)
+- Facebook will cache share data.
+- Secure URL issue could be solved by the following post.
 
+Ref: http://stackoverflow.com/questions/1138460/how-does-facebook-sharer-select-images
 
 **How do I tell Facebook which image to use when my page gets shared?**
 
