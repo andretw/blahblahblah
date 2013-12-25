@@ -1,13 +1,15 @@
-http://stackoverflow.com/questions/1138460/how-does-facebook-sharer-select-images
+Ref: http://stackoverflow.com/questions/1138460/how-does-facebook-sharer-select-images
 
-How do I tell Facebook which image to use when my page gets shared?
+
+**How do I tell Facebook which image to use when my page gets shared?**
 
 Facebook has a set of open-graph meta tags that it looks at to decide which image to show.
 
 The keys one for the Facebook image are:
-
+```html
 <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg"/>
 <meta property="og:image:secure_url" content="https://secure.example.com/ogp.jpg" />
+```
 and it should be present inside the <head></head> tag at the top of your page.
 
 If these tags are not present, it will look for their older method of specifying an image: <link rel="image_src" href="/myimage.jpg"/>. If neither are present, Facebook will look at the content of your page and choose images from your page that meet its share image criteria: Image must be at least 50px by 50px, have a maximum aspect ratio of 3:1, and in PNG, JPEG or GIF format.
@@ -28,7 +30,8 @@ Can I update these meta tags with client side code like Javascript or jQuery? No
 Adding these tags causes my page to no longer validate. How can I fix this?
 
 You can add the necessary Facebook namespaces to your tag and your page should then pass validation:
-
+```html
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="https://www.facebook.com/2008/fbml">  
+```
