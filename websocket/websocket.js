@@ -30,7 +30,7 @@
 
   onOpen = function(evt) {
     writeToScreen("CONNECTED");
-    doSend("WebSocket rocks");
+    doSend("WebSocket rocks 中文");
   };
 
   onClose = function(evt) {

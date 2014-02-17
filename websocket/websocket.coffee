@@ -26,10 +26,10 @@ testWebSocket = ->
         return
 
     return
-    
+
 onOpen = (evt) ->
     writeToScreen "CONNECTED"
-    doSend "WebSocket rocks"
+    doSend "WebSocket rocks 中文"
     return
 onClose = (evt) ->
     writeToScreen "DISCONNECTED"
