@@ -1,0 +1,78 @@
+<html>
+<head>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./js/easeljs-0.7.1.min.js"></script>
+    <script src="./js/TweenLite.min.js"></script>
+    <script src="./js/index.js"></script>
+
+    <style type="text/css">
+        body {
+          background: #eee;
+        }
+
+        * {
+          position: absolute;
+          margin: 0; padding: 0;
+        }
+
+        input[type="text"] {
+          border: 1px solid #ddd;
+          padding: 6px;
+          font-size: 18px;
+          width: 200px;
+          text-transform: uppercase;
+          top: 30px;
+          left: 130px;
+        }
+
+        input[type="submit"] {
+          display: block;
+          width: 100px;
+          border: 0;
+          line-height: 35px;
+          height: 35px;
+          color: #fff;
+          background: mediumpurple;
+          font-size: 18px;
+          top: 30px;
+          left: 350px;
+          cursor: pointer;
+        }
+
+        form {
+          width: 600px;
+          height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+<canvas id="text" width="500" height="100"></canvas>
+<canvas id="stage" width="500" height="100"></canvas>
+<form id="form" style="display: none">
+    <input type="text" id="inputText" value="HELLO" />
+    <input type="submit" value="TRY IT" />
+</form>
+
+<script>
+    var answer_keys_arr = [73, 76, 79, 86, 69, 81, 78, 65, 80];
+    var user_typed_keys_ptr = 0;
+
+    $('body').keydown(function (e){
+        if(e.keyCode == answer_keys_arr[user_typed_keys_ptr]){
+            user_typed_keys_ptr++;
+        }else{
+            user_typed_keys_ptr = 0;
+        }
+
+        if(answer_keys_arr.length == user_typed_keys_ptr){
+            showAnimation();
+            user_typed_keys_ptr = 0;
+        }
+    })
+</script>
+
+</body>
+</html>
