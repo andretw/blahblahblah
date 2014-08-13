@@ -2,7 +2,7 @@
 (function() {
   var doSend, init, onClose, onError, onMessage, onOpen, output, testWebSocket, websocket, writeToScreen, wsUri;
 
-  wsUri = "ws://echo.websocket.org/";
+  wsUri = "ws://localhost:1025/";
 
   output = void 0;
 
@@ -30,7 +30,7 @@
 
   onOpen = function(evt) {
     writeToScreen("CONNECTED");
-    doSend("WebSocket rocks 中文");
+    doSend("WebSocket rocks 中文" + Math.random(0, 1));
   };
 
   onClose = function(evt) {

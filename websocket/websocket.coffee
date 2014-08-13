@@ -1,6 +1,7 @@
 # Origin from http://www.websocket.org/echo.html
 
-wsUri = "ws://echo.websocket.org/"
+#wsUri = "ws://echo.websocket.org/"
+wsUri = "ws://localhost:1025/"
 output = undefined
 websocket = new WebSocket(wsUri)
 
@@ -29,7 +30,7 @@ testWebSocket = ->
 
 onOpen = (evt) ->
     writeToScreen "CONNECTED"
-    doSend "WebSocket rocks 中文"
+    doSend "WebSocket rocks 中文" + Math.random(0,1)
     return
 onClose = (evt) ->
     writeToScreen "DISCONNECTED"

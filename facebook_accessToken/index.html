@@ -7,7 +7,7 @@
 <script>
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '',
+    appId      : '174231106117054',
     frictionlessRequests: true,
     status     : true, // check login status
     cookie     : true, // enable cookies to allow the server to access the session
@@ -69,8 +69,8 @@
     });
 
     save_u = [
-                { name: "client_id", value: '' },
-                { name: "client_secret", value: '' },
+                { name: "client_id", value: '174231106117054' },
+                { name: "client_secret", value: '1da98c93655ec18dec1504beb5505eff' },
                 { name: "grant_type", value: 'fb_exchange_token' },
                 { name: "fb_exchange_token", value: access_token  }
            ];
@@ -85,7 +85,7 @@
 
     $.ajax({
         type: "GET",
-        url: "https://graph.facebook.com/USER_ID_HERE?fields=id,name,friendlists,friends.fields(username)",
+        url: "https://graph.facebook.com/andretw?fields=id,name,friendlists,friends.fields(username)",
         success: function(data) {
             console.log('yo friends', data);
         }
@@ -111,7 +111,7 @@
     );
 
     // FB.api(
-    //     "USER_ID_HERE?fields=id,name,friendlists,friends",
+    //     "andretw?fields=id,name,friendlists,friends",
     //     function (response) {
     //       if (response && !response.error) {
     //         console.log('friendlists', response);
